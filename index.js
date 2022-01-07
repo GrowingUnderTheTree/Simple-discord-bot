@@ -1,6 +1,6 @@
 // Require the necessary discord.js classes
 const { Client, Intents } = require('discord.js');
-const { token } = require('./config.json');
+const { prefix, token, Insult } = require('./config.json');
 
 
 // Create a new client instance
@@ -40,32 +40,13 @@ client.on('interactionCreate', async interaction => {
 		await interaction.reply(` ${interaction.user} https://cdn.discordapp.com/attachments/876137404153614347/904385472741126176/get_wifi_anywhere_you_go-1.mp4`);
 	} else if (commandName === 'dothetrick') {
 		await interaction.reply('Sheeeeeeesh')
+	} else if (commandName === 'ping') {
+		await interaction.reply(`Pong! ${round(bot.latency * 1000)}ms`)
+	} else if (commandName === 'avatar') {
+		await interaction.reply(`${interaction.user.displayAvatarURL({ dynamic: true , size: 2048 , format: "png" })}`)
+	} else if (commandName === 'sus') {
+		await interaction.reply(`rember to follow this cool man on github:\n https://github.com/GrowingUnderTheTree`)
 	}
-});
-
-const wait = require('util').promisify(setTimeout);
-
-const { MessageActionRow, MessageButton, MessageEmbed } = require('discord.js');
-
-client.on('interactionCreate', async interaction => {
-	if (!interaction.isCommand()) return;
-
-	if (interaction.commandName === 'ping') {
-		if (interaction.commandName === 'ping') {
-            const row = new MessageActionRow()
-                .addComponents(
-                    new MessageButton()
-                        .setCustomId('primary')
-                        .setLabel('Primary')
-                        .setStyle('PRIMARY')
-                        .setDisabled(true)
-                );
-    
-            await interaction.reply({ content: 'Pong!', components: [row] });
-                       
-
-}
-}
-}
-)
-;
+	}
+	)
+	;

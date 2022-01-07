@@ -1,5 +1,6 @@
 {
-	"token": "[your-token]",
-    "clientId": "[Your-Client-id",
-	"guildId": "[Your-guild-id]"
+	"token": "NzMyMTc3MjIxNjY1Njg1NTM0.XwwzLA.0aO3Qr6LaE9DJGmiVF-6fN2rew4",
+    "clientId": "732177221665685534",
+	"guildId": "862201606401032212",
+	"prefix": "C!"
 }

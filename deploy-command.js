@@ -13,6 +13,8 @@ const commands = [
 	new SlashCommandBuilder().setName('banrandom').setDescription('OH MY GOD SOMEONE GOTTA GET BANNED'),
 	new SlashCommandBuilder().setName('cbt').setDescription('Weekly CBT training UwU'),
 	new SlashCommandBuilder().setName('dothetrick').setDescription('DO THE TRICK YES'),
+	new SlashCommandBuilder().setName('avatar').setDescription('I wonder what will happen'),
+	new SlashCommandBuilder().setName('sus').setDescription('real sus this is'),
 ]
 	.map(command => command.toJSON());
 
