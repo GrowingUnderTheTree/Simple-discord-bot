@@ -15,6 +15,7 @@ const commands = [
 	new SlashCommandBuilder().setName('dothetrick').setDescription('DO THE TRICK YES'),
 	new SlashCommandBuilder().setName('avatar').setDescription('I wonder what will happen'),
 	new SlashCommandBuilder().setName('sus').setDescription('real sus this is'),
+	new SlashCommandBuilder().setName('information').setDescription('Get member activities')
 ]
 	.map(command => command.toJSON());
 

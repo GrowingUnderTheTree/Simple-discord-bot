@@ -1,6 +1,7 @@
 // Require the necessary discord.js classes
 const { Client, Intents } = require('discord.js');
 const { prefix, token, Insult } = require('./config.json');
+const { MessageEmbed } = require('discord.js');
 
 
 // Create a new client instance
@@ -46,7 +47,24 @@ client.on('interactionCreate', async interaction => {
 		await interaction.reply(`${interaction.user.displayAvatarURL({ dynamic: true , size: 2048 , format: "png" })}`)
 	} else if (commandName === 'sus') {
 		await interaction.reply(`rember to follow this cool man on github:\n https://github.com/GrowingUnderTheTree`)
-	}
-	}
+	} else if (commandName === 'information') {
+		const exampleEmbed = new MessageEmbed()
+	.setColor('#0099ff')
+	.setTitle('Information lmao')
+	.setURL('https://discord.js.org/')
+	.setAuthor('Segs', 'https://i1.sndcdn.com/artworks-8ybm6xpeLGqNThGT-TsgqMw-t500x500.jpg', 'https://GrowingUnderTheTree.github.io')
+	.setDescription(`Informations of ${interaction.user}`)
+	.setThumbnail(`${interaction.user.displayAvatarURL({ dynamic: true , size: 2048 , format: "png" })}`)
+	.addFields(
+		{ name: 'tag and id', value: `${interaction.user.tag}, ${interaction.user.id}` },
+		{ name: 'Created at', value: `${interaction.user.createdAt}`},
+		{ name: 'My github profile: ', value: 'https://github.com/GrowingUnderTheTree', inline: true },
+		{ name: 'Server name', value:`${interaction.guild.name}`}
 	)
-	;
+	.setImage(`https://i1.sndcdn.com/artworks-8ybm6xpeLGqNThGT-TsgqMw-t500x500.jpg`)
+	.setTimestamp()
+	.setFooter('I make this bot lmao','https://i1.sndcdn.com/artworks-8ybm6xpeLGqNThGT-TsgqMw-t500x500.jpg');
+
+ await interaction.reply({ embeds: [exampleEmbed] });
+	}
+})
