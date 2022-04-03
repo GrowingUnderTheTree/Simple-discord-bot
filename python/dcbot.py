@@ -1,9 +1,5 @@
 from email import message
 import random
-import re
-from tkinter import N
-from tracemalloc import start
-from turtle import color, title
 import discord
 import time
 from discord.ext.commands import Bot
