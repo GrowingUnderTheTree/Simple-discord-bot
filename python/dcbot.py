@@ -18,7 +18,7 @@ intents.presences = False
 intents.members = True
 bot = commands.Bot(command_prefix='#')
 
-TOKEN = "OTU4NzE0MDQ4ODUyMTM1OTM2.YkRWCQ._sxIQ5DUCWogCh1fORnPDruKg_s"
+TOKEN = "HERE"
 client = discord.Client(intents=intents)
 intents = discord.Intents.all()
 game = discord.Game(name="Did you just told someone to shut?")
